@@ -1,7 +1,7 @@
 contacts = {
-        "david": "6757585",
-        "chechu": "94859345",
-        "maria": "35384435",
+        "laura": "6757585",
+        "sara": "94859345",
+        "pepe": "35384435",
     }
 name = ""
 while name != "*":

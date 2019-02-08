@@ -1,11 +1,16 @@
-def sortList(lista):
-    auxList = []
-    for i in range(len(lista)):
-        aux = ""
-        aux = aux + str(lista[i][1]) + " " + "." + str(lista[i][2]) + " " + str(lista[i][0])
-        auxList.append(aux)
-    return auxList
+nom1 = input("Escribe el nombre 1: ")
+apellido1 = input("Escribe el Apellido 1: ")
+inicial1 = input("Escribe la Inicial 1: ")
+nom2 = input("Escribe el nombre 2: ")
+apellido2 = input("Escribe el Apellido 2: ")
+inicial2 = input("Escribe la Inicial 2: ")
+nom3 = input("Escribe el nombre 3: ")
+apellido3 = input("Escribe el Apellido 3: ")
+inicial3 = input("Escribe la Inicial 3: ")
 
+tupla = [(apellido1, nom1 ,inicial1), (apellido2,nom2 ,inicial2), (apellido2,nom3,inicial2)]
 
-list_person = [("Angulo", "David", "D"), ("Perez", "Jesus", "J")]
-print(sortList(list_person))
+input("Pulsa lo que sea para invertir de orden la list")
+
+tupla = [(nom1, inicial1+".",apellido1), (nom2, inicial2+".",apellido2), (nom3, inicial3+".",apellido3)]
+print(tupla)

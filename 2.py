@@ -1,29 +1,42 @@
-def first_option():
-    word = input("escribe una palabra -> ")
-    secondWord = input("escribe otra palabra -> ")
-    if word in secondWord:
-        print("la palabra " + word + " esta dentro de la palabra " + secondWord)
+import os
+
+def menu():
+    #Limpia la pantalla y muestra el menu
+    os.system('cls')
+    print("Selecciona una opción")
+    print("\t1 - Encontrar cadena en subacdena")
+    print("\t2 - Ordenar por orden alfabetico dos strings")
+    print("\t9 - salir")
+
+
+while True:
+    # Mostramos el menu
+    menu()
+
+    # solicituamos una opción al usuario
+    opcionMenu = input("Inserta una opcion :")
+
+    if opcionMenu == "1":
+        cadena1 = input("1º Cadena:")
+        cadena2 = input("2º Cadena:")
+        if cadena1.find(cadena2)> -1 :
+            print("La 1 cadena contiene la segunda cadena")
+        else:
+            print("La cadena 1 no contiene la 2")
+        if cadena2.find(cadena1) > -1 :
+            print("La cadena 2 contiene la 1")
+        elif cadena2.find(cadena1) == -1:
+            print("La cadena 2 no contiene la 1")
+    elif opcionMenu == "2":
+        cadena1 = input("1º Palabra:")
+        cadena2 = input("2º Palabra:")
+        cadenas = [cadena1,cadena2]
+        cadenas.sort()
+        print(cadenas)
+
+    elif opcionMenu == "9":
+        print("Adios")
+        break
     else:
-        print("la palabra " + word + " no esta dentro de la palabra " + secondWord)
 
-
-def second_option():
-    word = input("escribe una palabra -> ")
-    secondWord = input("escribe otra palabra -> ")
-    if word < secondWord:
-        print(word)
-
-    else:
-       print(secondWord)
-
-options = {1: first_option,
-           2: second_option,
-
-
-           }
-print("escribe 1 para comprobar si una palabra esta dentro de otra")
-print("escribe 2 para imprimer la palabra anterior en orden alfabético")
-
-
-num = int(input())
-options[num]()
+        input("No has pulsado ninguna opción correcta...\npulsa una tecla para continuar")
